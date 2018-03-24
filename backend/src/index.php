@@ -9,10 +9,12 @@ $post = new Post("Title test", "aaa", "Gugu");
 $title = $post->getTitle();
 
 $calc = new Calculation;
-echo "<h1> Calculadora </h1>";
-echo "<h2> $title </h2>";
-echo "<ul>";
-echo "<li>soma 1 + 1 = ".$calc->sum(1, 1)."</li>";
-echo "<li>subtração 1 - 1 = ".$calc->sub(1, 1)."</li>";
-echo "<li>multiplicação 1 * 1 = ".$calc->mult(1, 1)."</li>";
-echo "<ul/>";
+
+$loader = new Twig_Loader_Filesystem('../View');
+$twig = new Twig_Environment($loader);
+
+echo $twig->render('index.html', array(
+  'sum' => $calc->sum(1, 1),
+  'sub' => $calc->sub(1, 1),
+  'mult' => $calc->mult(1, 1),
+));

@@ -38,10 +38,10 @@ services:
         volumes:
           - data:/var/lib/mysql
         environment:
-            MYSQL_ROOT_PASSWORD: secretaria
-            MYSQL_DATABASE: secretaria
-            MYSQL_USER: secretaria
-            MYSQL_PASSWORD: secretaria
+            MYSQL_ROOT_PASSWORD: blog
+            MYSQL_DATABASE: blog
+            MYSQL_USER: blog
+            MYSQL_PASSWORD: blog
 
 ###########################
 # Setup the Database (PhpMyAdmin) container
@@ -54,7 +54,7 @@ services:
             - mysql
         environment:
             PMA_ARBITRARY: 1
-            MYSQL_ROOT_PASSWORD: secretaria
-            MYSQL_USER: secretaria
-            MYSQL_PASSWORD: secretaria
+            MYSQL_ROOT_PASSWORD: blog
+            MYSQL_USER: blog
+            MYSQL_PASSWORD: blog
 
