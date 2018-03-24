@@ -7,4 +7,14 @@ class Calculation
   {
     return $a + $b;
   }
+
+  public function sub($a, $b)
+  {
+    return $a - $b;
+  }
+
+  public function mult($a, $b)
+  {
+    return $a * $b;
+  }
 }
