@@ -1,6 +1,6 @@
-# Auto Loading from scripts 
+# PHP MVC
 
-This is one project for studying the  auto loading from PHP 
+This is one project for studying the  mvc from PHP 
 
 ## dependencies
 
