@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  background-color: #333;
+}
+
+.header-title {
+  color: #fff;
+}
