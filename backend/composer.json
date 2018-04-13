@@ -1,8 +1,8 @@
 {
     "autoload": {
         "psr-4": {
-            "Controllers\\" : "src/controllers",
-            "Models\\": "src/models"
+            "Blog\\" : "src/",
+            "Blog\\Database\\" : "src/database/"
         }
     },
     "require": {

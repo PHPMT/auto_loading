@@ -1,6 +1,6 @@
 <?php
 
-namespace Models;
+namespace Blog\Models;
 
 class Post
 {

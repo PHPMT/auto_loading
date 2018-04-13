@@ -54,19 +54,21 @@
     </ul>
   </nav>
   <main class="posts">
-    <div class="post-item">
-      <h2 class="post-title">
-        {{title}}
-      </h2>
-      <p class="post-author">
-        Autor: {{author}}
-      </p>
-      <div>
-        <p class="text">
-          {{text}}
+    {% for post in posts %}
+      <div class="post-item">      
+        <h2 class="post-title">
+          {{post.title}}
+        </h2>
+        <p class="post-author">
+          Autor: {{post.author}}
         </p>
+        <div>
+          <p class="text">
+            {{post.text}}
+          </p>
+        </div>
       </div>
-    </div>
+    {% endfor %}
   </main>
 </body>
 </html>

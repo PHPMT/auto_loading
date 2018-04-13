@@ -10,6 +10,7 @@ services:
 # Setup the Nginx container
 ###########################
     nginx:
+        container_name: 'blog_html'
         image: nginx:latest
         ports:
             - 8080:80
@@ -17,11 +18,14 @@ services:
             - ./devops/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
         volumes_from:
             - php
+        links:
+            - mysql
 
 ###########################
 # Setup the PHP container
 ###########################
     php:
+        container_name: 'blog_php'
         build: ./devops/docker/php/
         expose:
             - 9000
@@ -32,6 +36,7 @@ services:
 # Setup the Database (MySQL) container
 ###########################
     mysql:
+        container_name: 'database_blog'
         image: mysql:5.6
         ports:
           - "3306:3306"
