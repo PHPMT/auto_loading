@@ -3,6 +3,7 @@
 namespace Blog;
 
 use Blog\Database\PostRepository;
+use Blog\View\Post;
 
 class App
 {

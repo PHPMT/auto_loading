@@ -2,7 +2,8 @@
     "autoload": {
         "psr-4": {
             "Blog\\" : "src/",
-            "Blog\\Database\\" : "src/database/"
+            "Blog\\Database\\" : "src/database/",
+	    "Blog\\View\\" : "src/view/"
         }
     },
     "require": {

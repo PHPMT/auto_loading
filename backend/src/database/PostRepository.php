@@ -2,6 +2,8 @@
 
 namespace Blog\Database;
 
+use Blog\Database\Connection;
+
 
 class PostRepository
 {
@@ -31,9 +33,9 @@ class PostRepository
       $database = new Connection();
       $db = $database->openConnection();
       $sql = "SELECT * FROM post" ;
-      
+      $array = [];
       $posts = $db->query($sql);
-      return $posts;
+      return $array;
     }
     catch (PDOException $e)
     {

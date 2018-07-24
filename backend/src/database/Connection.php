@@ -2,12 +2,13 @@
 
 namespace Blog\Database;
 
+use PDO;
+
 class Connection
 {
   private $dbDrive = "mysql";
-  private $host = "blog_db";
+  private $host = "db_blog";
   private $dbName = "blog";
-  private $server = "$dbDrive:host=$host;dbname=$dbName";
   private $user = "blog";
   private $pass = "blog";
   private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
@@ -17,7 +18,7 @@ class Connection
   {
     try
     {
-      $this->con = new PDO($this->server, $this->user, $this->pass, $this->options);
+      $this->con = new PDO("mysql:host=db_blog;dbname=blog", $this->user, $this->pass, $this->options);
       return $this->con;
     }
     catch (PDOException $e)
