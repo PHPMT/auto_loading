@@ -14,6 +14,9 @@ class App
   public function run()
   {
     $server = new Server;
+    $server->get('/posts', function (Request $request, Response $response, array $args) {
+ 	echo "posts";
+    });
     $server->get('/', function (Request $request, Response $response, array $args) {
       $visitante = new Visitante();
       $comentario = $visitante->comentar("Teste");
