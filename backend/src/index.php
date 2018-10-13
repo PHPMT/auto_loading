@@ -6,3 +6,4 @@ use Blog\App;
 
 $app = new App();
 $app->run();
+
