@@ -16,7 +16,7 @@ environments:
 
     development:
         adapter: mysql
-        host: database_blog
+        host: 127.0.0.1
         name: blog
         user: blog
         pass: 'blog'
