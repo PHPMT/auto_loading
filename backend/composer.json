@@ -7,7 +7,16 @@
         }
     },
     "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "monolog/monolog": "^2.1",
+        "php-di/php-di": "^6.2",
+        "slim/psr7": "^1.1",
+        "slim/slim": "^4.5",
         "robmorgan/phinx": "^0.9.2",
-        "twig/twig": "^2.0"
+        "twig/twig": "^3.0"
+    },
+    "require-dev": {
+        "phinx": "^0.12.3"
     }
 }
