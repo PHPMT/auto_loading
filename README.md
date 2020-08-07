@@ -2,7 +2,7 @@
 
 This is one project for studying the  mvc from PHP 
 
-## dependencies
+## Dependency tools
 
 * docker
 * docker-compose
@@ -10,4 +10,8 @@ This is one project for studying the  mvc from PHP
 
 ## how to run
 
-``docker-compose up``
+
+- install dependencies of backend using `composer install` in backend folder
+- run backend with using `docker-compose up`
+- run phinx to init table using `vendor/bin/phinx migrate` in backend folder
+- access [localhost:8080](http://localhost:8080)
