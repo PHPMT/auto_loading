@@ -2,7 +2,7 @@
 
 namespace Blog\Models;
 
-class Post
+class PostModel
 {
   private $title;
   private $text;
